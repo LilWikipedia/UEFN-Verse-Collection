@@ -50,3 +50,44 @@ shared_waiter<public>(payload:type) := class(awaitable(payload)):
                 Awaitable.Await()
                 SharedEvent.Signal(Payload)
 
+
+# Usage example (when subscribing to an event that returns an agent)
+wrapp_event_add_param:=module:
+
+    OnBegin<override>()<suspends>:void=
+                    
+        ButtonDevice.InteractedWithEvent.SubscribeAgent(OnButtonInteract, "Hello!")
+            
+    OnButtonInteract(Agent : agent, Text : string) : void =
+        Print("Button interacted with {Text}!")
+                    
+
+# Usage example (when subscribing to an event that returns tuple(), aka an empty tuple)
+    
+    OnBegin<override>()<suspends>:void=
+        CampfireDevice.CampfirePulseEvent.SubscribeEmpty(OnCampfirePulse, 90210)
+            
+    OnCampfirePulse(Number : int) : void =
+        Print("Campfire pulse had {Number}!")
+            
+
+# Wrapper Utilities
+
+(Listenable : listenable(agent)).SubscribeAgent(OutputFunc : tuple(agent, t)->void, ExtraData : t where t:type) : cancelable =
+    Wrapper := wrapper_agent(t){ExtraData := ExtraData, OutputFunc := OutputFunc}
+    Listenable.Subscribe(Wrapper.InputFunc)
+
+wrapper_agent(t : type) := class():
+    ExtraData : t;
+    OutputFunc : tuple(agent, t) -> void
+    InputFunc(Agent : agent):void = OutputFunc(Agent, ExtraData)
+
+(Listenable : listenable(tuple())).SubscribeEmpty(OutputFunc : t -> void, ExtraData : t where t:type) : cancelable =
+    Wrapper := wrapper_empty(t) {ExtraData := ExtraData, OutputFunc := OutputFunc}
+    Listenable.Subscribe(Wrapper.InputFunc)
+
+wrapper_empty(t : type) := class():
+    ExtraData : t;
+    OutputFunc : t -> void
+    InputFunc():void = OutputFunc(ExtraData)
+
