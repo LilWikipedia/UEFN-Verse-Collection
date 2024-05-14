@@ -18,3 +18,12 @@ RemoveKeyFromMap(ExampleMap:[player]canvas, ElementToRemove:player):[player]canv
     for (Key -> Value : ExampleMap, Key <> ElementToRemove):
         set NewMap = ConcatenateMaps(NewMap, map{Key => Value})
     return NewMap
+
+# Alternative Usage
+
+RemoveKeyFromMap(ExampleMap:[string]int, ElementToRemove:string):[string]int=
+    var NewMap:[string]int = map{}
+# Concatenate Keys from ExampleMap into NewMap, excluding ElementToRemove
+    for (Key -> Value : ExampleMap, Key <> ElementToRemove):
+        set NewMap = ConcatenateMaps(NewMap, map{Key => Value})
+    return NewMap
