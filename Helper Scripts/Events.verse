@@ -21,3 +21,32 @@ CountdownEndedEvent.Signal();
 loop:
     EliminationManager.EliminatedEvent().Await();
     set Count += 1;
+
+
+# Generic class which you can set up to wait on multiple events
+# and return the event that does occur and its payload.
+# When you instantiate the class, you define the payload type you want.
+
+SharedWaiter:shared_waiter(int) = shared_waiter(int){}
+
+shared_waiter<public>(payload:type) := class(awaitable(payload)):
+    # Single custom event to wait and signal on
+    SharedEvent<internal>:event(payload) = event(payload){}
+        
+    # Wait on the custom shared event. Result is the associated payload.
+    Await<override>()<suspends>:payload=
+        SharedEvent.Await()
+
+    # Add the event to wait on and the payload associated with the event if it occurs
+    AddAwaitable<public>(Awaitable:awaitable(t), Payload:payload where t:type):void=
+        spawn{AwaitFirstSignal(Awaitable, Payload)}
+    
+    # Race between the multiple events. First event to occur signals the shared event
+    # and cancels the wait for any remaining events that are still waiting to occur.
+    AwaitFirstSignal<internal>(Awaitable:awaitable(t), Payload:payload where t:type)<suspends>:void=
+        race:
+            SharedEvent.Await()
+            block:
+                Awaitable.Await()
+                SharedEvent.Signal(Payload)
+
