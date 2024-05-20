@@ -7,10 +7,11 @@ While browsing for Verse/UEFN on the web, I came across a [repository](https://g
 ***
 ## More Resources
 
-* [Unofficial API](https://fncwiki.com)
-* [Official API](https://dev.epicgames.com/documentation/en-us/uefn/verse-api)
-* [Community Snippets](https://dev.epicgames.com/community/fortnite/snippets)
-* [End User License Agreement](https://www.unrealengine.com/eula)
+# * [Unofficial API](https://fncwiki.com)
+[Direct link - Verse](https://www.verse.fncwiki.com) | [Direct link - Creative](https://www.creative.fncwiki.com)
+# * [Official API](https://dev.epicgames.com/documentation/en-us/uefn/verse-api)
+# * [Community Snippets](https://dev.epicgames.com/community/fortnite/snippets)
+# * [End User License Agreement](https://www.unrealengine.com/eula)
 
 ### Attributions:
 
