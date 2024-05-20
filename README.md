@@ -15,8 +15,8 @@ While browsing for Verse/UEFN on the web, I came across a [repository](https://g
 
 ## Attributions:
 
-### * [@LilWikipediaFN](https://allmylinks.com/lilwikipedia)
-### * [@GrinernCreates](https://twitter.com/GrinernCreates)
-### * [@Tsar](https://youtube.com/@TsarShorts)
-### * [@AxelCapek](https://x.com/AxelCapek)
-### * [@SarahRust](https://dev.epicgames.com/community/profile/5B4Z8/summergrrrl)
+* ### [@LilWikipediaFN](https://allmylinks.com/lilwikipedia)
+* ### [@GrinernCreates](https://twitter.com/GrinernCreates)
+* ### [@Tsar](https://youtube.com/@TsarShorts)
+* ### [@AxelCapek](https://x.com/AxelCapek)
+* ### [@SarahRust](https://dev.epicgames.com/community/profile/5B4Z8/summergrrrl)
