@@ -2,7 +2,7 @@
 
 # Get player speed every second in a spawned async loop using the speed = distance / time formula
 
-# By Sarah Rust
+# By Sarah Rust (@summergrrrl)
 # https://dev.epicgames.com/community/snippets/mwjX/fortnite-polling-player-speed
 
 using { /Fortnite.com/Devices }
