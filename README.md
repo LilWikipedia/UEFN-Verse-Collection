@@ -9,3 +9,4 @@ While browsing for Verse/UEFN on the web, I cam across a repository by @GrinernC
 * [@GrinernCreates](https://twitter.com/GrinernCreates)
 * [@Tsar](https://youtube.com/@TsarShorts)
 * [@AxelCapek](https://x.com/AxelCapek)
+* [@SarahRust](https://dev.epicgames.com/community/profile/5B4Z8/summergrrrl)
