@@ -18,5 +18,6 @@ While browsing for Verse/UEFN on the web, I came across a [repository](https://g
 * ### [@LilWikipediaFN](https://allmylinks.com/lilwikipedia)
 * ### [@GrinernCreates](https://twitter.com/GrinernCreates)
 * ### [@Tsar](https://youtube.com/@TsarShorts)
+* ### [@LloydEvans](https://dev.epicgames.com/community/profile/KQDbl/le-8g7e)
 * ### [@AxelCapek](https://x.com/AxelCapek)
 * ### [@SarahRust](https://dev.epicgames.com/community/profile/5B4Z8/summergrrrl)
