@@ -22,4 +22,6 @@ While browsing for Verse/UEFN on the web, I came across a [repository](https://g
 * ### [@AxelCapek](https://x.com/AxelCapek)
 * ### [@SarahRust](https://dev.epicgames.com/community/profile/5B4Z8/summergrrrl)
 * ### [@appiemasterr](https://x.com/appiemasterr)
+* ### [@Mapshot_Agency](https://dev.epicgames.com/community/profile/DMeLv/Mapshot_Agency)
+
  
